@@ -1,3 +1,4 @@
+<!-- Cambiar variables cliente/empresa/transporte para simular usuario -->
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar color="primary">
@@ -6,10 +7,35 @@
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <ion-list-header color="secondary">Navigate</ion-list-header>
-      <button menuClose ion-item>Nav 1</button>
-      <button menuClose ion-item>Nav 2</button>
+    <!-- Menu cliente -->
+    <ion-list *ngIf="cliente">
+      <ion-list-header color="secondary">Cliente</ion-list-header>
+      <button menuClose ion-item>Inicio</button>
+      <button menuClose ion-item>Pedidos</button>
+      <button menuClose ion-item>Reportes</button>
+      <ion-list-header color="secondary">cliente</ion-list-header>
+       <button menuClose ion-item>Afiliaciones</button>
+      <button menuClose ion-item>Log out</button>
+    </ion-list>
+    <!-- Menu empresa -->
+    <ion-list *ngIf="empresa">
+      <ion-list-header color="secondary">Empresa</ion-list-header>
+      <button menuClose ion-item (click)="goHome()">Inicio</button>
+      <button menuClose ion-item (click)="goPedidos()">Pedidos</button>
+      <button menuClose ion-item (click)="goInventario()">Inventario</button>
+      <button menuClose ion-item>Reportes</button>
+      <ion-list-header color="secondary">Empresa</ion-list-header>
+       <button menuClose ion-item>Afiliaciones</button>
+      <button menuClose ion-item>Log out</button>
+    </ion-list>
+    <!-- Menu transporte -->
+    <ion-list *ngIf="transporte">
+      <ion-list-header color="secondary">Transporte</ion-list-header>
+      <button menuClose ion-item>Inicio</button>
+      <button menuClose ion-item>Pedidos</button>
+      <ion-list-header color="secondary">Transporte</ion-list-header>
+       <button menuClose ion-item>Afiliaciones</button>
+      <button menuClose ion-item>Log out</button>
     </ion-list>
   </ion-content>
 

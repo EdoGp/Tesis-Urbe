@@ -3,19 +3,19 @@
   <ion-navbar color="primary">
     <ion-title>Home</ion-title>
     <!-- Menu solo se muestra con acceso  -->
-    <button menuToggle *ngIf="in"><ion-icon name="menu"></ion-icon></button>
+    <button menuToggle *ngIf="logIn"><ion-icon name="menu"></ion-icon></button>
   </ion-navbar>
 </ion-header>
 <!-- Contenito con acceso  -->
 
-<ion-content padding *ngIf="in">
+<ion-content padding *ngIf="logIn">
   <h1>Home</h1>
   <p>Bievenido Usuario !</p>
 </ion-content>
 
 <!-- Usuario sin acceso  -->
 
-<ion-tabs *ngIf="out">
+<ion-tabs *ngIf="logOut">
   <ion-tab tabTitle="Login" [root]="loginTab" tabIcon="Home"></ion-tab>
   <ion-tab tabTitle="Sign Up" [root]="signUpTab" tabIcon="Home"></ion-tab>
 </ion-tabs>
