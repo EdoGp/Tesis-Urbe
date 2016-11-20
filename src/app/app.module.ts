@@ -1,7 +1,7 @@
 import { NgModule} from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AfiliarPage } from '../pages/pages';
+import { AfiliacionPage } from '../pages/pages';
 import { AgregarProductosPage } from '../pages/pages';
 import { HomePage } from '../pages/pages';
 import { InventarioPage } from '../pages/pages';
@@ -14,8 +14,8 @@ import { SignUpPage } from '../pages/pages';
 @NgModule({
   declarations: [
     MyApp,
-    AfiliarPage,
     AgregarProductosPage,
+    AfiliacionPage,
     HomePage,
     InventarioPage,
     LoginPage,
@@ -29,8 +29,8 @@ import { SignUpPage } from '../pages/pages';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AfiliarPage,
     AgregarProductosPage,
+    AfiliacionPage,
     HomePage,
     InventarioPage,
     LoginPage,

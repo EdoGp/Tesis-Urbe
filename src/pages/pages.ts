@@ -1,5 +1,5 @@
 export * from "./home/home";
-export * from "./afiliar/afiliar";
+export * from "./afiliacion/afiliacion";
 export * from "./agregar-productos/agregar-productos";
 export * from "./inventario/inventario";
 export * from "./login/login";
