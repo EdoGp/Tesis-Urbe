@@ -2,17 +2,18 @@ import { Component,ViewChild} from '@angular/core';
 import {Nav,Platform} from 'ionic-angular';
 import {StatusBar,Splashscreen} from 'ionic-native';
 
-import {HomePage} from '../pages/pages';
-import {InventarioPage} from '../pages/pages';
-import {PedidosPage} from '../pages/pages';
-import {AfiliacionPage} from '../pages/pages';
+import { HttpModule  } from '@angular/http';
+import { Api  } from '../providers/providers';
+
+import {HomePage,InventarioPage,PedidosPage,AfiliacionPage} from '../pages/pages';
 
 import * as globals from '../global/variables';
 
 
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  providers:[HttpModule,Api]
 })
 export class MyApp {
 

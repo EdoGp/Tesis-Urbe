@@ -11,6 +11,9 @@
 <ion-content padding *ngIf="logIn">
   <h1>Home</h1>
   <p>Bievenido Usuario !</p>
+   <button ion-item *ngFor="let usuario of usuarios">Nombre Usuario: {{usuario.nombre}}</button>
+   <button ion-item *ngFor="let producto of productos">Nombre Producto: {{producto.nombre}}</button>
+   <button ion-item *ngFor="let pedido of pedidos">Id Pedido: {{pedido.id_usuario}}</button>
 </ion-content>
 
 <!-- Usuario sin acceso  -->
