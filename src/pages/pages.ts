@@ -6,4 +6,5 @@ export * from "./login/login";
 export * from "./pedidos/pedidos";
 export * from "./productos/productos";
 export * from "./sign-up/sign-up";
+export * from "./configuracion/configuracion";
 

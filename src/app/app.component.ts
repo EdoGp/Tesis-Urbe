@@ -5,7 +5,7 @@ import {StatusBar,Splashscreen} from 'ionic-native';
 import { HttpModule  } from '@angular/http';
 import { Api  } from '../providers/providers';
 
-import {HomePage,InventarioPage,PedidosPage,AfiliacionPage} from '../pages/pages';
+import {HomePage,InventarioPage,PedidosPage,AfiliacionPage,ConfiguracionPage} from '../pages/pages';
 
 import * as globals from '../global/variables';
 
@@ -54,6 +54,11 @@ export class MyApp {
     goAfiliacion(){
     this.rootPage = AfiliacionPage;
     this.nav.popTo(AfiliacionPage);
+  }
+
+     goConfiguracion(){
+    this.rootPage = ConfiguracionPage;
+    this.nav.popTo(ConfiguracionPage);
   }
 
 }

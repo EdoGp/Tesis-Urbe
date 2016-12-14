@@ -1,14 +1,9 @@
 import { NgModule} from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AfiliacionPage } from '../pages/pages';
-import { AgregarProductosPage } from '../pages/pages';
-import { HomePage } from '../pages/pages';
-import { InventarioPage } from '../pages/pages';
-import { LoginPage } from '../pages/pages';
-import { PedidosPage } from '../pages/pages';
-import { ProductosPage } from '../pages/pages';
-import { SignUpPage } from '../pages/pages';
+
+import { AfiliacionPage,AgregarProductosPage,HomePage,InventarioPage,LoginPage,PedidosPage,ProductosPage,SignUpPage,ConfiguracionPage} from '../pages/pages';
+
 
 
 @NgModule({
@@ -21,7 +16,8 @@ import { SignUpPage } from '../pages/pages';
     LoginPage,
     PedidosPage,
     ProductosPage,
-    SignUpPage
+    SignUpPage,
+    ConfiguracionPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -36,7 +32,8 @@ import { SignUpPage } from '../pages/pages';
     LoginPage,
     PedidosPage,
     ProductosPage,
-    SignUpPage
+    SignUpPage,
+    ConfiguracionPage
   ],
   providers: []
 })
