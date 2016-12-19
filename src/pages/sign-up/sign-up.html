@@ -1,92 +1,57 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>SignUp</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
-<h1>Sign Up</h1>
-<p>Aqui va el Registro</p>
-
-
-
-<ion-grid>
-  <ion-row>
-    <ion-col width-50 offset-25>
-      
-  <ion-list>
-
-  <ion-item>
-    <ion-label stacked>Nombre:</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-       <ion-label stacked>Apellido:</ion-label>
-    <ion-input type="text"></ion-input>
-    </ion-item>
-
-
-     
-  <ion-item class="">
-    <ion-label stacked>documento de identidad:</ion-label>
-    
-    <ion-select class="documento" multiple="true" okText="Ok" cancelText="Cancel" >
-          <ion-option value="bacon" checked="true">V</ion-option>
-      <ion-option value="olives">J-</ion-option> 
-     
-    </ion-select>
- 
-   <ion-input type="number"></ion-input>
-  </ion-item>
-  
-<ion-item>
-    <ion-label stacked>Direccion:</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item>
-       <ion-label stacked>Pais:</ion-label>
-    <ion-input type="text"></ion-input>
-    </ion-item>
-<ion-item>
-    <ion-label stacked>Estado:</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-
-  <ion-item>
-       <ion-label stacked>Ciudad:</ion-label>
-    <ion-input type="text"></ion-input>
-    </ion-item>
-
-<ion-item>
-    <ion-label stacked>Email:</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-
-  <ion-item>
-       <ion-label stacked>Telefono:</ion-label>
-    <ion-input type="number"></ion-input>
-    </ion-item>
-<ion-item>
-   </ion-item>
-</ion-list>
-<div class="botones">
-     <button ion-button color="secondary">Enviar</button> 
-     <button ion-button color="danger">Cancelar</button> 
-      </div>
-</ion-col>
-
- </ion-row>
-
-  
-   
-
-</ion-grid>
-
-
-
-
+  <h1>Sign Up</h1>
+  <p>Aqui va el Registro</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <form (ngSubmit)="postUsuario(usuario)">
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>Nombre:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.nombre" name="nombre"></ion-input>
+            </ion-item>
+            <ion-item class="">
+              <ion-label stacked>documento de identidad:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.rif" name="rif"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Direccion:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.direccion.direccion"name="direccion"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Pais:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.direccion.pais"name="pais"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Estado:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.direccion.estado"name="estado"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Ciudad:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.direccion.ciudad" name="ciudad"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Email:</ion-label>
+              <ion-input type="email" [(ngModel)]="usuario.contacto.email"name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Telefono:</ion-label>
+              <ion-input type="text" [(ngModel)]="usuario.contacto.telefono"name="telefono"></ion-input>
+            </ion-item>
+            <ion-item>
+            </ion-item>
+          </ion-list>
+          <div class="botones">
+            <button ion-button type="submit" color="secondary">Enviar</button>
+            <button ion-button color="danger">Cancelar</button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

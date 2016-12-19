@@ -1,22 +1,41 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {Api} from '../../providers/providers';
 
-/*
-  Generated class for the SignUp page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-sign-up',
   templateUrl: 'sign-up.html'
 })
 export class SignUpPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController,private api:Api) {}
+
+   usuario = {
+
+    "nombre": "",
+    "rif": "",
+    "tipo": "",
+        "direccion": {
+            "direccion": "",
+            "ciudad": "",
+            "estado": "",
+            "pais": ""
+        },
+        "contacto": {
+            "email": "",
+            "telefono": ""
+        }
+}
 
   ionViewDidLoad() {
     console.log('Hello SignUpPage Page');
   }
+
+  postUsuario(usuario) {
+    this.api.postUsuario(usuario).subscribe();
+    //console.log(this.usuario)
+  }
+
+  
 
 }
