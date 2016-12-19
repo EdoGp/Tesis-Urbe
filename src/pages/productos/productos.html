@@ -6,5 +6,34 @@
 
 
 <ion-content padding>
-<h1>Lista de Productos</h1>
+  <ion-grid>
+  <ion-row>
+    <ion-col offset-25> 
+  <ion-list class="lista-producto">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+  <ion-list-header>
+   <h1>Lista de Productos</h1>
+  </ion-list-header>
+  <ion-item>Blade Runner</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Blade Runner</ion-item>
+  <ion-item>Terminator II</ion-item>
+  <ion-item>The Empire Strikes Back</ion-item>
+  <ion-item></ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
+</ion-grid>
+
+
+
+
 </ion-content>

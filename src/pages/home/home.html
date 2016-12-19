@@ -3,7 +3,7 @@
   <ion-navbar color="primary">
     <ion-title>Home</ion-title>
     <!-- Menu solo se muestra con acceso  -->
-    <button menuToggle *ngIf="logIn"><ion-icon name="menu"></ion-icon></button>
+    <button  ion-button menuToggle *ngIf="logIn"><ion-icon ios="ios-menu" md="md-menu"></ion-icon></button>
   </ion-navbar>
 </ion-header>
 <!-- Contenito con acceso  -->
@@ -11,9 +11,66 @@
 <ion-content padding *ngIf="logIn">
   <h1>Home</h1>
   <p>Bievenido Usuario !</p>
+ 
    <button ion-item *ngFor="let usuario of usuarios">Nombre Usuario: {{usuario.nombre}}</button>
    <button ion-item *ngFor="let producto of productos">Nombre Producto: {{producto.nombre}}</button>
    <button ion-item *ngFor="let pedido of pedidos">Id Pedido: {{pedido.id_usuario}}</button>
+
+<ion-grid>
+   <ion-row>
+    <ion-col width-50 offset-25>
+      <h1 class="titulo">Perfil de la empresa</h1>
+    
+<ion-card class="carta">
+  <ion-card-header>
+   Datos de la empresa:
+  </ion-card-header>
+  <ion-card-content>
+   <p> Nombre de la empresa: Lorem ipsum dolor sit amet.</p>
+ <p> RIF: Lorem ipsum dolor sit amet.</p>
+  <p> Telefono de contacto: Lorem ipsum dolor sit amet.</p>
+  </ion-card-content>
+</ion-card>
+</ion-col>
+ </ion-row>
+    
+</ion-grid>
+
+<ion-grid>
+   <ion-row>
+    <ion-col width-50 offset-25>
+<ion-card>
+  <ion-card-header>
+  Pedidos Actuales:
+  </ion-card-header>
+  <ion-card-content>
+   <p> Nombre de la empresa: Lorem ipsum dolor sit amet.</p>
+ <p> RIF: Lorem ipsum dolor sit amet.</p>
+  <p> Telefono de contacto: Lorem ipsum dolor sit amet.</p>
+  </ion-card-content>
+</ion-card>
+</ion-col>
+ </ion-row>
+    
+</ion-grid>
+
+<ion-grid>
+   <ion-row>
+    <ion-col width-50 offset-25>
+<ion-card>
+  <ion-card-header>
+  Pedidos Actuales:
+  </ion-card-header>
+  <ion-card-content>
+   <p> Nombre de la empresa: Lorem ipsum dolor sit amet.</p>
+ <p> RIF: Lorem ipsum dolor sit amet.</p>
+  <p> Telefono de contacto: Lorem ipsum dolor sit amet.</p>
+  </ion-card-content>
+</ion-card>
+</ion-col>
+ </ion-row>
+    
+</ion-grid>
 </ion-content>
 
 <!-- Usuario sin acceso  -->

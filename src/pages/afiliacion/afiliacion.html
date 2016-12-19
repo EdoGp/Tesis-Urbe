@@ -2,12 +2,40 @@
 
   <ion-navbar color="primary">
     <ion-title>Afiliacion</ion-title>
-    <button menuToggle><ion-icon name="menu"></ion-icon></button>
+   <button  ion-button menuToggle><ion-icon ios="ios-menu" md="md-menu"></ion-icon></button>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 <h1>Afiliaciones aqui</h1>
+  <ion-grid>
+  <ion-row>
+    <ion-col offset-25>
+
+
+  <ion-list class="lista-producto">
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item *ngFor="let item of items">
+    {{ item }}
+  </ion-item>
+  <ion-list-header>
+   <h1>Lista de Productos</h1>
+  </ion-list-header>
+  <ion-item >Blade Runner</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Lorem ipsum dolor.</ion-item>
+  <ion-item>Lorem ipsum dolor</ion-item>
+  <ion-item>Blade Runner</ion-item>
+  <ion-item>Terminator II</ion-item>
+  <ion-item>The Empire Strikes Back</ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
+</ion-grid>
+
 </ion-content>
