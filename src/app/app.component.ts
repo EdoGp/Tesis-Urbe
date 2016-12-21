@@ -9,6 +9,8 @@ import {HomePage,InventarioPage,PedidosPage,AfiliacionPage,ConfiguracionPage} fr
 
 import * as globals from '../global/variables';
 
+import { Storage } from '@ionic/storage';
+
 
 
 @Component({
@@ -27,7 +29,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, private storage:Storage) {
     this.initializeApp();
   }
 
@@ -59,6 +61,11 @@ export class MyApp {
      goConfiguracion(){
     this.rootPage = ConfiguracionPage;
     this.nav.popTo(ConfiguracionPage);
+  }
+
+  logOut(){
+    this.storage.clear();
+    location.reload();
   }
 
 }

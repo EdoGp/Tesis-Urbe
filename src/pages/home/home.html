@@ -75,7 +75,7 @@
 
 <!-- Usuario sin acceso  -->
 
-<ion-tabs *ngIf="logOut">
+<ion-tabs *ngIf="!logIn">
   <ion-tab tabTitle="Login" [root]="loginTab" tabIcon="body"></ion-tab>
   <ion-tab tabTitle="Sign Up" [root]="signUpTab" tabIcon="body"></ion-tab>
 </ion-tabs>

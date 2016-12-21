@@ -13,7 +13,7 @@
       <button menuClose ion-item (click)="goPedidos()">Pedidos</button>
       <ion-list-header color="secondary">cliente</ion-list-header>
       <button menuClose ion-item (click)="goConfiguracion()">Configuracion</button>
-      <button menuClose ion-item>Log out</button>
+      <button menuClose ion-item (click)="logOut()">Log out</button>
     </ion-list>
     <!-- Menu empresa -->
     <ion-list *ngIf="empresa">
@@ -24,7 +24,7 @@
       <ion-list-header color="secondary">Empresa</ion-list-header>
       <button menuClose ion-item (click)="goAfiliacion()">Afiliaciones</button>
       <button menuClose ion-item (click)="goConfiguracion()">Configuracion</button>
-      <button menuClose ion-item>Log out</button>
+      <button menuClose ion-item (click)="logOut()">Log out</button>
     </ion-list>
     <!-- Menu transporte -->
     <ion-list *ngIf="transporte">
@@ -33,7 +33,7 @@
       <button menuClose ion-item>Pedidos</button>
       <ion-list-header color="secondary">Transporte</ion-list-header>
       <button menuClose ion-item (click)="goConfiguracion()">Configuracion</button>
-      <button menuClose ion-item>Log out</button>
+      <button menuClose ion-item (click)="logOut()">Log out</button>
     </ion-list>
   </ion-content>
 </ion-menu>

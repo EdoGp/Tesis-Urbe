@@ -1,43 +1,28 @@
-
 <ion-header>
-
   <ion-navbar>
     <ion-title>Login</ion-title>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
   <h1>Login</h1>
-<p>Aqui va el Acceso</p>
-
-
-<ion-grid>
-  <ion-row>
-    <ion-col width-50 offset-25>
-      
-      <ion-list class="lista color-lista">
-  <h1 class="ingresar">Ingresa a tu cuenta</h1>
-  <ion-item>
-   <ion-label floating>Username</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
- <br>
-  <ion-item>
-    <ion-label floating>Password</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-  <br>
-  <div class="boton">
-<button ion-button color="secondary">Iniciar Sesion</button> 
-<button ion-button>Registrate</button></div>
-</ion-list>
-</ion-col>
- </ion-row>
-</ion-grid>
-
-
-
-
+  <p>Aqui va el Acceso</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 offset-25>
+        <form (ngSubmit)="getUsuario(nombre)">
+          <ion-list class="lista color-lista">
+            <h1 class="ingresar">Ingresa a tu cuenta</h1>
+            <ion-item>
+              <ion-label floating>Nombre</ion-label>
+              <ion-input type="text" [(ngModel)]="nombre" name="nombre"></ion-input>
+            </ion-item>
+            <br>
+            <div class="boton">
+              <button ion-button type="submit" color="secondary">Iniciar Sesion</button>
+            </div>
+          </ion-list>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 
 import { AfiliacionPage,AgregarProductosPage,HomePage,InventarioPage,LoginPage,PedidosPage,ProductosPage,SignUpPage,ConfiguracionPage} from '../pages/pages';
 
+import { Storage } from '@ionic/storage';
 
 
 @NgModule({
@@ -35,6 +36,6 @@ import { AfiliacionPage,AgregarProductosPage,HomePage,InventarioPage,LoginPage,P
     SignUpPage,
     ConfiguracionPage
   ],
-  providers: []
+  providers: [Storage]
 })
 export class AppModule {}

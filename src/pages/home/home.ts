@@ -4,6 +4,7 @@ import {LoginPage} from '../pages';
 import {SignUpPage} from '../pages';
 import * as globals from '../../global/variables';
 import {Api} from '../../providers/providers';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-home',
@@ -11,22 +12,21 @@ import {Api} from '../../providers/providers';
 })
 export class HomePage {
 
+constructor(public navCtrl: NavController, private api:Api,private storage: Storage) {}
+
   usuarios:any=[];
   productos:any=[];
   pedidos:any=[];
-
+  
   loginTab= LoginPage;
   signUpTab= SignUpPage;
-  logIn = globals.logIn;
-  logOut = globals.logOut;
+  logIn = "";
   
-  constructor(public navCtrl: NavController, private api:Api) {
-
-  }
 
   ionViewDidLoad()
   {
-   this.api.getUsuario().subscribe(data =>{this.usuarios=data.data});
+
+   this.storage.get('name').then((val) => {this.logIn=val});
    this.api.getProducto().subscribe(data =>{this.productos=data.data});
    this.api.getPedido().subscribe(data =>{this.pedidos=data.data});
   }

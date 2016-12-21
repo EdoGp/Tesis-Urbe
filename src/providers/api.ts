@@ -9,18 +9,19 @@ export class Api {
 
   private baseUrl = "http://localhost:3000";
 
-  usuarios: any = [];
+  usuario= {};
   productos: any = [];
   pedidos: any = [];
 
   constructor(public http: Http) {}
 
+//get
 
-  getUsuario(): Observable < any > {
+  getUsuario(nombre): Observable < any >{
 
-    return this.http.get(`${this.baseUrl}/usuario`).map((response: Response) => {
-      this.usuarios = response.json();
-      return this.usuarios;
+    return this.http.get(`${this.baseUrl}/usuario/${nombre}`).map((response: Response) => {
+      this.usuario = response.json();
+      return this.usuario;
     });
   }
   getProducto(): Observable < any > {
@@ -37,6 +38,10 @@ export class Api {
       return this.pedidos;
     });
   }
+
+  
+
+//Post
 
   postProducto(producto) {
 
@@ -71,6 +76,8 @@ export class Api {
       .map(res => res.json(), this.handleError);
 
   }
+
+//error
 
   handleError(error) {
     console.error(error);
