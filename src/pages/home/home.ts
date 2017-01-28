@@ -25,7 +25,6 @@ constructor(public navCtrl: NavController, private api:Api,private storage: Stor
 
   ionViewDidLoad()
   {
-
    this.storage.get('name').then((val) => {this.logIn=val});
    this.api.getProducto().subscribe(data =>{this.productos=data.data});
    this.api.getPedido().subscribe(data =>{this.pedidos=data.data});

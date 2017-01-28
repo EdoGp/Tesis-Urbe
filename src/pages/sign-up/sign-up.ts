@@ -11,8 +11,9 @@ export class SignUpPage {
   constructor(public navCtrl: NavController,private api:Api) {}
 
    usuario = {
-
     "nombre": "",
+    "password": "",
+
     "rif": "",
     "tipo": "",
         "direccion": {

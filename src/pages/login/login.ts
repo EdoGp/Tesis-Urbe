@@ -14,14 +14,20 @@ export class LoginPage {
   constructor(public navCtrl: NavController,private api:Api,private storage: Storage,private nav: Nav) {}
 
   nombre="";
-  usuario ={};
+  password="";
+  usuario:any =[];
 
-    getUsuario(nombre) {
-    this.api.getUsuario(nombre).subscribe(data =>{this.usuario=data});
-    //console.log(this.usuario)
-    this.storage.set('name', this.usuario);
-    this.storage.get('name').then((val) => {console.log(val)});
-    location.reload();
+    getUsuario(nombre,password) {
+    this.api.getUsuario(nombre,password).subscribe(data =>{this.usuario=data.data});
+    console.log(this.usuario)
+    
+    if(this.usuario!=null)
+    {
+      this.storage.set('name', this.usuario);
+      this.storage.get('name').then((val) => {console.log(val)});
+      location.reload();
+    }
+    
 
     }
 

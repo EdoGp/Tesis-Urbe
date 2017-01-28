@@ -17,9 +17,9 @@ export class Api {
 
 //get
 
-  getUsuario(nombre): Observable < any >{
+  getUsuario(nombre,password): Observable < any >{
 
-    return this.http.get(`${this.baseUrl}/usuario/${nombre}`).map((response: Response) => {
+    return this.http.get(`${this.baseUrl}/usuario/${nombre}/${password}`).map((response: Response) => {
       this.usuario = response.json();
       return this.usuario;
     });
